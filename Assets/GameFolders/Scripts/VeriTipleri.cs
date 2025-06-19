@@ -23,7 +23,12 @@ public class VeriTipleri:MonoBehaviour
     private void Start()
     {
         //method'u cagirirken parantez icine deger alsin ya da almasin parantez ac kapat yazilir bu bir yazim kuralidir.
-        Method1();
+        //Method1();
+        //Method2();
+        //Method3();
+        //Method4();
+        //Method5();
+        Method6();
     }
 
     // yazim hatalarina syntax error denir
@@ -55,7 +60,84 @@ public class VeriTipleri:MonoBehaviour
 
     private void Method2()
     {
+        int sayi1 = 10;
+        int sayi2 = 20;
+        //aritmatik operatorler + - / *
+        int sonuc = sayi1 + sayi2;
 
+        //int tcKimlik = 12345678912;
+        string tcKimlik = "12345678912";
+        string telNo = "1234567891";
+
+        //string yazi karakterlerinde birlestirir
+        Debug.Log("Sonuc: " + sonuc);
+        Debug.Log(string.Format("Sonuc: {0}", sonuc));
+        Debug.Log($"Sonuc: {sonuc}");
+    }
+
+    private void Method3()
+    {
+        float sayi1 = 10.5f;
+        float sayi2 = 20.9f;
+
+        float sonuc = sayi1 + sayi2;
+
+        Debug.Log($"Sonuc:{sonuc}");
+    }
+
+    private void Method4()
+    {
+        bool value1 = true;
+        bool value2 = false;
+
+        value1 = false; //deneme yaptik burada cevap degisecek mi diye degisti
+
+        if(value1 == true)  //true ya da false yani bool deger alirlar
+        {
+            Debug.Log("value1 true oldu");
+        }
+        else
+        {
+            Debug.Log("value1 false oldu");
+        }
+    }
+
+    private void Method5()
+    {
+        object value1 = 10; //int
+        object value2 = "string veri"; //string
+        object value3 = 55.99f; // float
+
+        //int sayi1 = "string value";
+        int value = 10;
+
+        int sayi = (int)value1;
+        string stringVeri = (string)value2;
+    }
+
+    private void Method6()
+    {
+        int sayi = 10;
+
+        //    10 +
+        //en uzun yazim
+        //sayi = sayi + 20; // sonuc => 30
+        //sayi -= 20; += -=
+
+        // sayi = sayi+1;
+        //sayi += 1;
+        sayi++; //bir bir arttirir
+        Debug.Log(sayi);
+
+        sayi--; //bu bir bir azaltir
+        Debug.Log(sayi);
+
+        //string value = "unity";
+
+        //value = value + ",";
+        //value += ",";
+
+        //Debug.Log(value);
     }
 
 }//kapanis scope
